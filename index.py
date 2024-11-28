@@ -17,7 +17,7 @@ from flask import request
 from flask import redirect
 from flask import render_template
 from flask import g
-from .database import Database
+from database import Database
 import random
 
 app = Flask(__name__, static_url_path="", static_folder="static")
