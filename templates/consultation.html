@@ -1,0 +1,17 @@
+{% extends "affichage.html" %}
+{% set active_page = "consultation" %}
+{% block content %}
+    <h1>Animaux disponibles pour consultation</h1>
+    <hr>
+    <br>
+    {% if not animals %}
+        <p>Aucun animal disponible.</p>
+    {% else %}
+        <ul>
+        {% for animal in animals %}
+            <li>{{ animal.nom }}, {{ animal.espece }}, {{ animal.ville }} ==> 
+                <a href="#" onclick="return recupererId('{{ animal.id }}')" class="intern">Descriptions complètes !</a></li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

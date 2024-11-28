@@ -1,0 +1,29 @@
+{% extends "affichage.html" %}
+{% set active_page = "accueil" %}
+{% block content %}
+<h1>accueil</h1>
+<hr>
+<h2>cherchez-vous un animal en particulier ?</h2>
+<p>
+    Cherchez dans nos animaux disponibles pour adoption...
+</p>
+<form action="/submit-recherche" method="post">
+    <input type="text" placeholder="Ex. Chien, Serpent, ..." name="recherche" required>
+    <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+<br>
+<h2>quelques uns des animaux disponibles pour adoption</h2>
+{% if not animals %}
+    <p>Aucun animal disponible.</p>
+{% else %}
+    <ul>
+    {% for animal in animals %}
+        <li>{{ animal.nom }}, {{ animal.espece}}, {{ animal.ville }} ==> <a href="#" onclick="return recupererId('{{ animal.id }}')" class="intern">Vers la page de l'animal</a></li>
+    {% endfor %}
+    </ul>
+{% endif %}
+<p>
+    Vous pouvez toujours consulter la liste complète des animaux disponibles pour adoption <a href="/consultation" class="intern">ici</a> !
+</p>
+{% endblock %}

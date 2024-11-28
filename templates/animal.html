@@ -1,0 +1,47 @@
+{% extends "affichage.html" %}
+{% block content %}
+    <h1>page de {{ animal.nom }}</h1>
+    <hr>
+    <table>
+        <tr>
+            <th>Nom :</th>
+            <td>{{ animal.nom }}</td>
+        </tr>
+        <tr>
+            <th>Espèce :</th>
+            <td>{{ animal.espece }}</td>
+        </tr>
+        <tr>
+            <th>Race :</th>
+            <td>{{ animal.race }}</td>
+        </tr>
+        <tr>
+            <th>Âge :</th>
+            <td>{{ animal.age }}</td>
+        </tr>
+        <tr>
+            <th>Descriptions :</th>
+            <td>{{ animal.description }}</td>
+        </tr>
+        <tr>
+            <th>Contact du propriétaire :</th>
+            <td><a href="mailto:{{animal.courriel}}" class="intern">{{ animal.courriel }}</a></td>
+        </tr>
+        <tr>
+            <th>Adresse :</th>
+            <td>{{ animal.adresse }}</td>
+        </tr>
+        <tr>
+            <th>Ville :</th>
+            <td>{{ animal.ville }}</td>
+        </tr>
+        <tr>
+            <th>Code postal :</th>
+            <td>{{ animal.cp }}</td>
+        </tr>
+    </table>
+    <p>
+        <b>Intéressé pour adopter cet animal ?</b> Contactez le propriétaire sur 
+        l'adresse courriel indiquée ci-haut pour lui signaler votre intérêt.
+    </p>
+{% endblock %}

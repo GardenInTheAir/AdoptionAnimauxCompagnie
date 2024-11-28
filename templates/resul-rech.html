@@ -1,0 +1,17 @@
+{% extends "affichage.html" %}
+{% block content %}
+    <h1>Animaux disponibles</h1>
+    <hr>
+    <br>
+    <h3>Recherche par espèce : {{ espece }}</h3>
+    {% if not animals %}
+        <p>Aucun animal disponible.</p>
+    {% else %}
+        <ul>
+        {% for animal in animals %}
+            <li>{{ animal.nom }}, {{ animal.description }} ==> 
+                <a href="#" onclick="return recupererId('{{ animal.id }}')" class="intern">Descriptions complètes !</a></li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

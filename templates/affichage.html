@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen">
+    <!-- Classe de style fournie pour le fa-search du boutton de recherche -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/img/logo-mini.png" type="image/x-icon">
+    <title>Paw Paw !</title>
+</head>
+<body>
+    <nav class="menu-bar">
+        <img src="/img/hi-soulgie.png" alt="hi">
+        <footer>
+            <small>
+                <a href="https://www.flaticon.com/free-stickers/cute" title="cute stickers">Cute stickers created by SoulGIE - Flaticon</a>
+            </small>
+        </footer>
+        <ul class="menu-options">
+            <li><a href="/" {% if active_page == "accueil" %} class="active" {% endif %}>accueil</a></li>
+            <li><a href="/consultation" {% if active_page == "consultation" %} class="active" {% endif %}>consultation</a></li>
+            <li><a href="/mise-en-adoption" {% if active_page == "adoption" %} class="active" {% endif %}>mise en adoption</a></li>
+        </ul>
+    </nav>     
+    <main>
+        <section class="container">
+            {% block content %}
+            {% endblock %}
+            <script src="/js/script.js"></script>
+        </section>
+    </main>
+</body>
+</html>

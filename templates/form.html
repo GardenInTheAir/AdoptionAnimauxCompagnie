@@ -1,0 +1,105 @@
+{% extends "affichage.html" %}
+{% set active_page = "adoption" %}
+{% block content %}
+    <h1>Formulaire de mise en adoption</h1>
+    <p>
+        Veuillez remplir le formulaire ci-dessous pour si vous désirez mettre en 
+        adoption votre animal.
+    </p>
+    <h3 id="err-form"></h3>
+
+    <form id="mise-en-adoption" name="mise-en-adoption" action="/submit-adoption" method="post">
+        <table>
+            <tr>
+                <th rowspan="3"><label for="nom">Nom de l'animal : </label></th>
+                <td>
+                    <input id="nom" name="nom" type="text" placeholder="Nom de l'animal ...">
+                </td>
+            </tr>
+            <tr id="msg-nom" class="msg-err"></tr>
+            <tr id="conf-nom" class="conforme"></tr>
+        
+            <tr>
+                <th rowspan="3"><label for="espece">Espèce de l'animal : </label></th>
+                <td>
+                    <input id="espece" name="espece" type="text" placeholder="Type de l'animal ...">
+                </td>
+            </tr>
+            <tr id="msg-espece" class="msg-err"></tr>
+            <tr id="conf-espece" class="conforme"></tr>
+        
+            <tr>
+                <th rowspan="3"><label for="race">Race de l'animal : </label></th>
+                <td>
+                    <input id="race" name="race" type="text" placeholder="Race de l'animal ...">
+                </td>
+            </tr>
+            <tr id="msg-race" class="msg-err"></tr>
+            <tr id="conf-race" class="conforme"></tr>
+        
+            <tr>
+                <th rowspan="3"><label for="age">Âge de l'animal : </label></th>
+                <td>
+                    <input id="age" name="age" type="number" placeholder="Âge" min="0" max="30">
+                </td>
+            </tr>
+            <tr id="msg-age" class="msg-err"></tr>
+            <tr id="conf-age" class="conforme"></tr>
+        
+            <tr>
+                <th rowspan="3"><label for="description">Descriptions : </label></th>
+                <td>
+                    <input id="description" name="description" type="text" placeholder="Décrivez votre animal ...">
+                </td>
+            </tr>
+            <tr id="msg-desc" class="msg-err"></tr>
+            <tr id="conf-desc" class="conforme"></tr>
+        
+            <tr>
+                <th rowspan="3"><label for="courriel">Courriel du propriétaire : </label></th>
+                <td>
+                    <input id="courriel" name="courriel" type="text" placeholder="Votre courriel ...">
+                </td>
+            </tr>
+            <tr id="msg-courriel" class="msg-err"></tr>
+            <tr id="conf-courriel" class="conforme"></tr>
+        
+            <tr>
+                <th rowspan="3"><label for="adresse">Adresse : </label></th>
+                <td>
+                    <input id="adresse" name="adresse" type="text" placeholder="Votre adresse civique ...">
+                </td>
+            </tr>
+            <tr id="msg-adr" class="msg-err"></tr>
+            <tr id="conf-adr" class="conforme"></tr>
+        
+            <tr>
+                <th rowspan="3"></th>
+                <td>
+                    <input id="ville" name="ville" type="text" placeholder="Ville ...">
+                </td>
+            </tr>
+            <tr id="msg-ville" class="msg-err"></tr>
+            <tr id="conf-ville" class="conforme"></tr>
+            
+            <tr>
+                <th rowspan="3"></th>
+                <td>
+                    <input id="cp" name="cp" type="text" placeholder="Code postal ...">
+                </td>
+            </tr>
+            <tr id="msg-cp" class="msg-err"></tr>
+            <tr id="conf-cp" class="conforme"></tr>
+        
+            <tr></tr>
+            
+            <tr>
+                <th></th>
+                <td>
+                    <input type="reset" value="Recommencez">
+                    <input type="submit" value="Confirmez">
+                </td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}
