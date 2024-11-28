@@ -1,0 +1,231 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+}
+  
+body {
+    background-color: antiquewhite;
+    color: black;
+}
+  
+h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 15px;
+}
+  
+h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 15px;
+}
+  
+h3 {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+  
+p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+  
+header.column-left {
+    width: 25%;
+    float: left;
+    background-color: #000;
+    color: antiquewhite;
+    position: relative;
+}
+
+nav img {
+    width: 80%;
+    padding-bottom: 10%;
+}
+  
+nav.menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    text-align: center;
+    background-color: black;
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+  
+ul.menu-options {
+    list-style-type: none;
+}
+  
+ul.menu-options a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-weight: bold;
+    color: antiquewhite;
+    text-transform: uppercase;
+}
+  
+ul.menu-options a.active {
+    color: #000;
+    background-color: antiquewhite;
+}
+
+  
+main {
+    margin-left: 250px;
+    padding: 10px;
+}
+  
+section {
+    width: 80%;
+    float: left;
+    padding: 10%;
+    text-align: justify;
+}
+  
+hr {
+    width: 10%;
+    text-align: left;
+    color: #000;
+    background-color: #000;
+    height:2px;
+    border-width:0;
+    margin-bottom: 15px;
+}
+
+  
+footer {
+    background-color: #000;
+    color: antiquewhite;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+  
+footer a {
+    margin-left: 150px;
+    text-decoration: none;
+    color: antiquewhite;
+}
+  
+fieldset {
+    border: 0;
+}
+  
+.label-container img {
+    border-radius: 50%;
+    width: 50px;
+}
+
+  
+input[type=number], input[type=text] {
+    border: none;
+    border-bottom: 2px solid #000;
+    background-color: antiquewhite;
+    width: 25%;
+}
+
+input[type=text]#description {
+    width: 100%;
+}
+
+form#mise-en-adoption textarea {
+    width: 100%;
+    height: 50px;
+    resize: vertical;
+    min-height: 50px;
+    max-height: 300px;
+    border: none;
+    border-bottom: 2px solid #000;
+    background-color: rgb(250, 235, 215);
+}
+  
+input[type=text]:focus, input[type=number]:focus, textarea:focus {
+    outline: none;
+}
+  
+input[type=submit], input[type=reset] {
+    padding:5px 15px; 
+    text-transform: uppercase;
+    font-weight: bold;
+    background:#000;
+    color: antiquewhite; 
+    cursor: pointer;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+div.questions {
+    float: left;
+    width: 25%;
+}
+  
+div.reponses {
+    float: left;
+    width: 75%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+table tr {
+    width: 25%;
+}
+table td {
+    width: 75%;
+}
+
+tr.msg-err {
+    color: rgb(174, 69, 28);
+    padding: 2%;
+    margin: 2%;
+    font-size: 12px;
+    font-weight: bold;
+}
+tr.conforme {
+    color: rgb(105, 132, 51);
+    padding: 2%;
+    margin: 2%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#err-form {
+    color: rgb(174, 69, 28);
+}
+
+  
+p.img-err-conf img {
+    width: 200px;
+    margin-left: 15%;
+}
+  
+a.intern {
+    text-decoration: underline;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+}
+  
